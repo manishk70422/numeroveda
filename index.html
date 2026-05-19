@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numerology – Mulank & Bhagyank Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="logo">🔢 NumeroVeda</div>
+      <h1>Discover Your Numbers</h1>
+      <p class="tagline">Enter your birth date to reveal your <strong>Mulank</strong> (Psychic Number) and <strong>Bhagyank</strong> (Destiny Number) along with career guidance.</p>
+    </div>
+  </header>
+
+  <!-- Calculator -->
+  <main class="container">
+    <section class="card form-card">
+      <h2>Enter Your Birth Date</h2>
+      <form id="numerologyForm">
+        <div class="field-group">
+          <label for="birthdate">Date of Birth</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+        </div>
+        <button type="submit" class="btn-primary">Calculate My Numbers</button>
+      </form>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="results hidden">
+
+      <div class="numbers-row">
+        <div class="number-card mulank-card">
+          <div class="number-label">Mulank</div>
+          <div class="number-value" id="mulankValue">—</div>
+          <div class="number-subtitle">Psychic / Birth Number</div>
+        </div>
+        <div class="number-card bhagyank-card">
+          <div class="number-label">Bhagyank</div>
+          <div class="number-value" id="bhagyankValue">—</div>
+          <div class="number-subtitle">Destiny / Life Path Number</div>
+        </div>
+      </div>
+
+      <!-- Mulank Details -->
+      <div class="detail-card" id="mulankDetails">
+        <h3>🌟 Mulank Details</h3>
+        <div class="detail-body" id="mulankBody"></div>
+      </div>
+
+      <!-- Bhagyank Details -->
+      <div class="detail-card" id="bhagyankDetails">
+        <h3>🔮 Bhagyank Details</h3>
+        <div class="detail-body" id="bhagyankBody"></div>
+      </div>
+
+      <!-- Career -->
+      <div class="detail-card career-card" id="careerDetails">
+        <h3>💼 Career Guidance</h3>
+        <div class="detail-body" id="careerBody"></div>
+      </div>
+
+      <button class="btn-secondary" onclick="resetForm()">Calculate Again</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>NumeroVeda &copy; 2026 &nbsp;|&nbsp; For entertainment & self-reflection purposes</p>
+  </footer>
+
+  <script src="numerology.js"></script>
+</body>
+</html>
